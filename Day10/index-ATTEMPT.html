@@ -123,14 +123,12 @@
         if (checkbox !== currentClicked && checkbox == lastClicked && checkbox.checked) {
           lastIndex = index;
         }
-
         if (checkbox == currentClicked) {
           currentIndex = index;
         }
       })
 
       if (currentIndex > lastIndex) {
-        console.log(checkboxes);
         selectedCheckboxes = Array.from(checkboxes).slice(lastIndex, currentIndex);
       } else if (currentIndex < lastIndex) {
         selectedCheckboxes = Array.from(checkboxes).slice(currentIndex, lastIndex);
